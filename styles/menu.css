@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: "Ubuntu",sans-serif;
     box-sizing: border-box;
 }
 
@@ -16,6 +15,7 @@ ul {
     top: 0px;
     width: 100%;
     height: 70px;
+    z-index: 1;
     background-color: #2c3a47;
 }
 
@@ -23,7 +23,7 @@ ul {
     float: right;
     margin-top: 20px;
     margin-left: 50px;
-     margin-right: 66px;
+    margin-right: 66px;
 }
 
 #content-menu ul li {
@@ -59,6 +59,7 @@ ul {
     padding: 0 40px;
 }
 
+/*  Bug */
 .section-title{
     text-align: center;
     margin-bottom: 80px;
@@ -216,6 +217,127 @@ section.dark{
     color: #fff;
 }
 
+/* 6 products */
+
+
+.items {
+    height: 200vh;
+}
+
+.items .body {
+    display: flex;
+    position: relative;
+    top: -30px;
+    margin: 30px;
+}
+
+.body-heading {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    font-family: 'Baloo 2', cursive;
+}
+
+.body .item {
+    width: 30%;
+    height: 72vh;
+    background-color: #2c3a47;
+    border-radius: 10px;
+    margin: 30px auto;
+}
+
+.body .item:hover {
+    box-shadow: 2px 2px 5px rgb(27, 27, 27);
+}
+
+.body .item img {
+    width: 99%;
+    height: 50vh;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    /* height: auto; */
+    margin: 2px;
+}
+
+.body .text {
+    margin: 0px 10px;
+    padding: 10px;
+    /* border: 2px solid black; */
+}
+
+.body .shoes-heading {
+    margin: 0px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #fff;
+}
+
+.body .shoes-style {
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.body .text .shoes-price {
+    margin: 0px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 10px;
+}
+
+.body .text .shoes-price span {
+    text-decoration: line-through;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin-left: 30px;
+    color: #48dbfb;;
+}
+
+.body .butt {
+    /* margin: -15px 0px 0px 20px; */
+    width: 22%;
+    height: 30px;
+    border: 2px solid #48dbfb;
+    border-radius: 2px;
+    text-align: center;
+    margin: -15px auto 15px auto;
+    margin-top: 15px;
+    padding: 0px 8px 10px -3px;
+    padding-top: 4px;
+    /* background-color: rgb(148, 147, 147); */
+}
+
+.body .butt a {
+    margin: 15px 10px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #48dbfb;
+    
+}
+
+/* Bug */
+.body .butt:hover {
+    cursor: pointer;
+    background-color: #48dbfb;
+    color: #fff;
+}
+
+
+.body .butt p a:hover {
+   color: #fff; 
+}
 
 /* Footer */
 

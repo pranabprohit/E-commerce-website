@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login Page</title>
+    <title>Sign up Page</title>
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
@@ -40,7 +40,7 @@
 
     .loginbox{
 	width: 320px;
-	height: 440px;
+	height: 570px;
 	background: #2c3a47;
 	color: #fff;
 	top: 50%;
@@ -75,7 +75,7 @@
     }
 
 
-    .loginbox input[type="email"], input[type="password"]
+    .loginbox input[type="email"], input[type="password"], input[type="text"]
     {
 	border: none;
 	border-bottom: 1px solid #fff;
@@ -126,7 +126,7 @@
 	<body>
         <section id="sec1">
         <nav id="login-menu">
-            <p>Explore your true style.</p>
+            <p>Feel trendy. Feel authentic.</p>
             <ul>
                 <li><a href="signup.html">Sign up</a></li>
                 <li><a href="login.html">Login</a></li>
@@ -143,17 +143,20 @@
         <section id="sec2"> 
 		<div class="loginbox">
 			<img class="avatar">
-			    <h1>Login</h1>
+			    <h1>Sign up</h1>
 			    <form  name="myform" action="" method="" onsubmit="return validateform()">
+                <p>Username</p>
+				   <input type="text" name="name" id="name" placeholder="Enter Username">    
 				<p>E-mail</p>
 				   <input type="email" name="email" id="email" placeholder="Enter Email">
 				<p>Password</p>
 				   <input type="password" name="pass" id="pass" placeholder="Enter Password">
-				   <input type="submit" name="" value="Login"><br>
+                <p>Re-Enter Password</p>
+				   <input type="password" name="pass1" id="pass1" placeholder="Enter Password Again">    
+				   <input type="submit" name="" value="Sign up"><br>
 			    </form>
               <input type="submit" name="" onclick="location.href='index.html'" value="Cancel"><br>
-               <a href="#">Forgot password?</a><br>
-               <a href="signup.html">Don't have an account?</a>
+               <a href="login.html">Already have an account?</a>
         </div>
         </section>    
 		
@@ -168,19 +171,27 @@
         
          <script>
              function validateform() {
+                 var name = document.myform.name.value;
                  var email = document.myform.email.value;
                  var password = document.myform.pass.value;
+                 var password1 = document.myform.pass1.value;
 
-                 if (email == "" || email == null) {
+                if (name == "" || name == null) {
+                     alert('Invalid UserName');
+                     return false;
+                }if (email == "" || email == null) {
                      alert('Invalid Email ID.');
                      return false;
-                 } else if (password.length < 6) {
-                 alert('Password must contain more than 6 characters.');
-                 return false;
-                 } else {
-                 alert('Login Successful');
-                 return true;
-                 }
+                } else if (password.length < 6) {
+                     alert('Password must contain more than 6 characters.');
+                     return false;
+                } else if (password !== password1) {
+                     alert('Your Passwords does not match. Enter again.');
+                     return false;     
+                } else {
+                     alert('Registered Successfully');
+                     return true;
+                }
             }
        </script>
         

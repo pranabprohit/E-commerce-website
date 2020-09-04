@@ -46,11 +46,11 @@
                     </div>
                 </div>
                 
-                <form class="contact-form">
-                    <input type="text" class="nameZone" placeholder="Your Full Name">
-                    <input type="email" class="emailZone" placeholder="Your Email">
-                    <input type="text" class="subjectZone" placeholder="Subject">
-                    <textarea class="messageZone" placeholder="Message"></textarea>
+                <form class="contact-form" name="myform" action="" method="" onsubmit="return validateform()">
+                    <input type="text" class="nameZone" id="name" placeholder="Your Full Name">
+                    <input type="email" class="emailZone" id="email" placeholder="Your Email">
+                    <input type="text" class="subjectZone" id="subject" placeholder="Subject">
+                    <textarea class="messageZone" id="message" placeholder="Message"></textarea>
                     <input type="submit" value="Send Message" class="btn">
                 </form>
             </div>
@@ -64,5 +64,33 @@
                 </div>
             </div>
         </footer>
+    
+    <script>
+        function validateform() {
+            var name = document.myform.name.value;
+            var email = document.myform.email.value;
+            var subject = document.myform.subject.value;
+            var message = document.myform.message.value;
+
+            if (name == null || name == "") {
+                alert('Invalid Name');
+                return false;
+            } else if (email == null || email == "") {
+                alert('Invalid Email Id');
+                return false;
+            } else if (subject == "" || subject == null) {
+                alert('Please Write Something in the Subject');
+                return false;
+            } else if (message == "" || message == null) {
+                alert('Please Write Something in the Message');
+                return false;
+            } else {
+                alert('Your details are submitted successfully. We will get back to You shortly.')
+                return true;
+
+            }
+        }
+    </script>
+    
 </body>
 </html>    
